@@ -70,7 +70,10 @@ while meteor_jobbrol.xcor() > -400:
 while meteor_jobbrol.xcor() <= -400:
     szamlalo += 1
     kijelzo.clear()
-    kijelzo.write(szamlalo, align="center", font=("Arial", 30, "bold"))
+    kijelzo.color("white")
+    kijelzo.penup()
+    kijelzo.goto(0,260) 
+    kijelzo.write(f"Pontjaid: {szamlalo}", align="center", font=("Arial", 30, "bold"))
     for _ in range(1):
         value = randint(-300, 300)
     meteor_jobbrol.setx(400)
